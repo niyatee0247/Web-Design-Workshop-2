@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+}
+
+.board {
+    width: 480px;        
+    margin: 20px auto; 
+}
+
+.board div {
+    width: 60px;
+    height: 60px;
+    float: left;    
+}
+
+.black {
+    background-color: black;
+}
+
+.white {
+    background-color: white;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.pieces-guide {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.piece {
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #62a3ee;
+    text-align: center;
+}
+
+.piece img {
+    width: 80px;
+    height: 80px;
+}
