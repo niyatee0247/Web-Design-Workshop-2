@@ -1,0 +1,20 @@
+.body{
+    background-color: pink;
+    font-family: Arial;
+}
+.input{
+    width: 100%;
+    padding: 12px 20px;
+    font-family: Arial;
+    font-size: 16px;
+}
+.button{
+    background-color: white;
+    color:aqua;
+    font-family: Arial;
+    font-size: 16px;
+}
+.container{
+    padding: 20px;
+    background-color: plum;
+}
