@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Chess Game</title> 
+<link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+<h1>♟ Chess Game</h1> 
+<div id="board" class="board"></div> 
+<script> 
+const board = document.getElementById("board"); 
+const pieces = [ 
+"♜","♞","♝","♛","♚","♝","♞","♜", 
+"♟","♟","♟","♟","♟","♟","♟","♟", 
+"","","","","","","","", 
+"","","","","","","","", 
+"","","","","","","","", 
+"","","","","","","","", 
+"♙","♙","♙","♙","♙","♙","♙","♙", 
+"♖","♘","♗","♕","♔","♗","♘","♖" 
+]; 
+let selectedSquare = null; 
+for (let i = 0; i < 64; i++) { 
+const square = document.createElement("div"); 
+square.classList.add("square"); 
+const row = Math.floor(i / 8); 
+const col = i % 8; 
+if ((row + col) % 2 === 0) { 
+square.classList.add("white"); 
+} else { 
+square.classList.add("black"); 
+} 
+square.textContent = pieces[i]; 
+square.addEventListener("click", function () { 
+if (selectedSquare === null && square.textContent !== "") { 
+selectedSquare = square; 
+square.classList.add("selected"); 
+} else if (selectedSquare !== null) { 
+square.textContent = selectedSquare.textContent; 
+selectedSquare.textContent = ""; 
+selectedSquare.classList.remove("selected"); 
+selectedSquare = null; 
+} 
+}); 
+board.appendChild(square); 
+} 
+</script> 
+</body> 
+</html>
